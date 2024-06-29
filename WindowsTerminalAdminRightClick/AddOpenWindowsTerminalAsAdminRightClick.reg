@@ -1,0 +1,25 @@
+Windows Registry Editor Version 5.00
+
+;Adds Open in Windows Terminal (As Admin) to right click context menu
+;Provided by Mike Lierman and Invise Labs - a division of Invise Solutions
+;Enjoy this registry modification to simplify your workflow.
+
+
+[-HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin]
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin]
+"HasLUAShield"=""
+"MUIVerb"="Open in Windows Terminal (As Admin)"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-d','\"\"\"%V\\.\"\"\"')\""
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWTHereAsAdmin]
+"HasLUAShield"=""
+"MUIVerb"="Open in Windows Terminal (As Admin)"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWTHereAsAdmin\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-d','\"\"\"%V\\.\"\"\"')\""
