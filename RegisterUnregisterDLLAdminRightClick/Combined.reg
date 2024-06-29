@@ -1,0 +1,46 @@
+Windows Registry Editor Version 5.00
+
+;Unregister and register DLL and OCX modules (Elevated) from the context menu
+;This is a combined file, giving you both options, but does not support Windows 11 modern right click.
+;Provided by Mike Lierman and Invise Labs - a division of Invise Solutions
+;Enjoy this registry modification to simplify your workflow.
+
+;Unregister DLL
+[HKEY_CLASSES_ROOT\dllfile\shell]
+@="none"
+
+[HKEY_CLASSES_ROOT\dllfile\shell\Unregister]
+@="Unregister (as Admin)"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\dllfile\shell\Unregister\command]
+@="powershell -Command \"Start-Process -Wait -FilePath cmd -Verb RunAs -ArgumentList '/c', 'regsvr32.exe /u \\\"%1\\"'\""
+
+;Unregister OCX
+[HKEY_CLASSES_ROOT\ocxfile\shell]
+@="none"
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\Unregister]
+@="Unregister (as Admin)"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\Unregister\command]
+@="powershell -Command \"Start-Process -Wait -FilePath cmd -Verb RunAs -ArgumentList '/c', 'regsvr32.exe /u \\\"%1\\\"'\""
+
+;Register DLL
+[HKEY_CLASSES_ROOT\dllfile\shell\Register]
+@="Register (as Administrator)"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\dllfile\shell\Register\command]
+@="powershell -Command \"Start-Process -Wait -FilePath cmd -Verb RunAs -ArgumentList '/c', 'regsvr32.exe \\\"%1\\\"'\""
+
+;Register OCX
+[HKEY_CLASSES_ROOT\ocxfile\shell\Register]
+@="Register (as Administrator)"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\Register\command]
+@="powershell -Command \"Start-Process -Wait -FilePath cmd -Verb RunAs -ArgumentList '/c', 'regsvr32.exe \\\"%1\\\"'\""
+
+
