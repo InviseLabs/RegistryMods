@@ -1,7 +1,7 @@
 Windows Registry Editor Version 5.00
 
 ;Unregister DLl and OCX modules (Elevated) from the context menu
-;Provided by Mike Lierman and Invise Labs - a division of Invise Solutions
+;Created by Mike Lierman and Invise Labs - a division of Invise Solutions
 ;Enjoy this registry modification to simplify your workflow.
 
 [HKEY_CLASSES_ROOT\dllfile\shell]
