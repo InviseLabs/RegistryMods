@@ -2,7 +2,7 @@ Windows Registry Editor Version 5.00
 
 ;Unregister and register DLL and OCX modules (Elevated) from the context menu
 ;This is a combined file, giving you both options, but does not support Windows 11 modern right click.
-;Provided by Mike Lierman and Invise Labs - a division of Invise Solutions
+;Created by Mike Lierman and Invise Labs - a division of Invise Solutions
 ;Enjoy this registry modification to simplify your workflow.
 
 ;Unregister DLL
