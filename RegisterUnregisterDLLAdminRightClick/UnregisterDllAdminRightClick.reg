@@ -1,0 +1,26 @@
+Windows Registry Editor Version 5.00
+
+;Unregister DLl and OCX modules (Elevated) from the context menu
+;Provided by Mike Lierman and Invise Labs - a division of Invise Solutions
+;Enjoy this registry modification to simplify your workflow.
+
+[HKEY_CLASSES_ROOT\dllfile\shell]
+@="none"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\dllfile\shell\runas]
+@="&Unregister (as Admin)"
+
+[HKEY_CLASSES_ROOT\dllfile\shell\runas\command]
+@="regsvr32.exe /u \"%1\""
+
+
+[HKEY_CLASSES_ROOT\ocxfile\shell]
+@="none"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\runas]
+@="&Unregister (as Admin)"
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\runas\command]
+@="regsvr32.exe /u \"%1\""
