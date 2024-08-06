@@ -1,0 +1,48 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Search]
+; Allows searching OneDrive and documents, people rely on this
+"AllowCloudSearch"=dword:00000001
+; Normal policy settings
+"ConnectedSearchUseWeb"=dword:00000000
+"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000
+"DisableWebSearch"=dword:00000001
+; Proactive and probably invalid
+"EnableWebSearch"=dword:00000000
+"WebSearchEnabled"=dword:00000000
+"BingSearchEnabled"=dword:00000000
+"BingSearchDisabled"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows Search]
+; Allows searching OneDrive and documents, people rely on this
+"AllowCloudSearch"=dword:00000001
+; Normal policy settings
+"ConnectedSearchUseWeb"=dword:00000000
+"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000
+"DisableWebSearch"=dword:00000001
+; Proactive and probably invalid
+"EnableWebSearch"=dword:00000000
+"WebSearchEnabled"=dword:00000000
+"BingSearchEnabled"=dword:00000000
+"BingSearchDisabled"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+; Known reg settings
+"CortanaConsent"=dword:00000000
+"BingSearchEnabled"=dword:00000000
+; Proactive and probably invalid
+"ConnectedSearchUseWeb"=dword:00000000
+"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000
+"DisableWebSearch"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+; Known reg settings
+"CortanaConsent"=dword:00000000
+"BingSearchEnabled"=dword:00000000
+; Proactive and probably invalid
+"ConnectedSearchUseWeb"=dword:00000000
+"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000
+"DisableWebSearch"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
+"DisableSearchBoxSuggestions"=dword:00000000
